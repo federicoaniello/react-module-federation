@@ -15,7 +15,7 @@ export default async (req, res, next) => {
       onAllReady() {
         res.statusCode = didError ? 500 : 200;
         res.setHeader("Content-type", "text/html");
-        res.write(`<!DOCTYPE html`);
+        res.write(`<!DOCTYPE html>`);
         res.write(`<html ${helmet.htmlAttributes.toString()}>
       <head>
         ${helmet.title.toString()}
