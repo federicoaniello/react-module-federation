@@ -3,7 +3,6 @@ import { renderToPipeableStream } from 'react-dom/server';
 import { Helmet } from 'react-helmet';
 import App from '../src/components/App';
 import {StaticRouter} from "react-router-dom/server";
-import "styleguide/styles";
 export default async (req, res, next) => {
   const helmet = Helmet.renderStatic();
   let didError = false;

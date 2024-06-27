@@ -1,4 +1,4 @@
-const client = require('./config/webpack.client');
-const server = require('./config/webpack.server');
+import client from './config/webpack.client';
+import server from './config/webpack.server';
 
-module.exports = [client, server];
+export default [client, server];
