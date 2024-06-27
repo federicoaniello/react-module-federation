@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "build": "pnpm build:client && pnpm build:server",
-    "build:client": "webpack --mode production --config config/webpack.client.js",
-    "build:server": "webpack --mode production --config config/webpack.server.js",
+    "build:client": "webpack --mode development --config config/webpack.client.js",
+    "build:server": "webpack --mode development --config config/webpack.server.js",
     "serve": "npx serve dist/ -p 3001",
     "start": "pnpm build && pnpm serve"
   },
@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.13.10",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }
