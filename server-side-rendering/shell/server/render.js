@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { StaticRouter } from "react-router-dom/server";
 export default async (req, res, next) => {
   const App = (await import("../src/components/App")).default;
+  await import ("styleguide/Styles");
   const helmet = Helmet.renderStatic();
   let didError = false;
 

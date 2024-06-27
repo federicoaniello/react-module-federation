@@ -7,7 +7,7 @@ module.exports = {
     name: 'styleguide',
     filename: 'remoteEntry.js',
     exposes: {
-      './styles': './src/bootstrap',
+      './Styles': './src/bootstrap',
     },
     shared: {
       ...deps,
@@ -31,7 +31,7 @@ module.exports = {
     //     remote2: 'remote2@http://localhost:3002/server/remoteEntry.js',
     //   },
     exposes: {
-        './styles': './src/bootstrap',
+        './Styles': './src/bootstrap',
       },
       shared: {
         ...deps,

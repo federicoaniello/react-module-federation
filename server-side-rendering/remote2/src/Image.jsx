@@ -10,7 +10,7 @@ export default () => (
     }}
   >
     <h2>Remote 2: Image</h2>
-    <button style={{ marginBottom: '1rem' }} onClick={() => alert('Client side Javascript works!')}>
+    <button className='btn btn-primary mb-2' onClick={() => alert('Client side Javascript works!')}>
       Click me to test i'm interactive!
     </button>
     <img
