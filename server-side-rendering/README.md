@@ -17,9 +17,9 @@ Run `yarn` to install the dependencies.
 
 Run `yarn build` to build the packages.
 
-Run `yarn serve` in the shell and remote1 and remote2 folders to start the servers.
+Run `yarn serve` in the shell and remote1 and remote2, styleguide and header folders to start the servers. or you can run `pnpm build` and then `pnpm serve` in the root folder.
 
-This will build the packages and and serve them on ports 3000, 3001 and 3002 respectively.
+This will build the packages and and serve them on ports 3000, 3001, 3002, 3003 and 3004 respectively.
 
 - [localhost:3000](http://localhost:3000/) (SHELL)
 - [localhost:3001](http://localhost:3001/) (STANDALONE REMOTE1)
