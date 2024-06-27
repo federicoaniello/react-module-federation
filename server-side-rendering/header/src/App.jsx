@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
-ReactDOM.render(<Header />, document.getElementById('app'));
+const root = createRoot(document.getElementById('app'))
+root.render(<Header />);
