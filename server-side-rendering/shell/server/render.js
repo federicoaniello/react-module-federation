@@ -30,6 +30,9 @@ export default async (req, res, next) => {
         res.write(
           `<script async data-chunk="main" src="http://localhost:3000/static/main.js"></script>`
         );
+        res.write(
+          '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>'
+        )
         res.write(`</body></html>`);
       },
       onShellError() {
