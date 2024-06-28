@@ -4,13 +4,14 @@ const { UniversalFederationPlugin } = require('@module-federation/node');
 
 module.exports = {
   client: new ModuleFederationPlugin({
-    name: 'header',
+    name: 'catalog',
     filename: 'remoteEntry.js',
     remotes: {
-      cart: 'cart@http://localhost:3007/client/remoteEntry.js',
+      api: 'api@http://localhost:3008/client/remoteEntry.js',
+
     },
     exposes: {
-      './Header': './src/components/Header',
+        './Catalog': './src/Catalog',
     },
     shared: {
       ...deps,
@@ -23,23 +24,24 @@ module.exports = {
         requiredVersion: deps['react-dom'],
       },
       'react-router-dom': {
-        singleton: true,
-        requiredVersion: deps['react-router-dom'],
-      },
+          singleton: true,
+          requiredVersion: deps['react-router-dom'],
+        },
     },
   }),
   server: [
     new UniversalFederationPlugin({
-      name: 'header',
+      name: 'catalog',
       filename: 'remoteEntry.js',
+      isServer: true,
       remoteType: 'script',
       library: { type: 'commonjs-module' },
-      isServer: true,
       remotes: {
-        cart: 'cart@http://localhost:3007/client/remoteEntry.js',
+        api: 'api@http://localhost:3008/server/remoteEntry.js',
+
       },
-    exposes: {
-        './Header': './src/components/Header',
+      exposes: {
+        './Catalog': './src/Catalog',
       },
       shared: {
         ...deps,
@@ -56,6 +58,6 @@ module.exports = {
           requiredVersion: deps['react-router-dom'],
         },
       },
-    }),
+    })
   ],
 };
