@@ -11,7 +11,6 @@ export default function Root(props) {
       });
   });
   return (
-    <BrowserRouter basename="/catalog">
       <div className="container">
         <Routes>
           <Route path="/">
@@ -19,6 +18,5 @@ export default function Root(props) {
           </Route>
         </Routes>
       </div>
-    </BrowserRouter>
   );
 }

@@ -20,6 +20,10 @@ module.exports = {
         singleton: true,
         requiredVersion: deps['react-dom'],
       },
+      'rxjs': {
+        singleton: true,
+        requiredVersion: 'auto'
+      }
     },
   }),
   server: [
@@ -43,6 +47,10 @@ module.exports = {
           singleton: true,
           requiredVersion: deps['react-dom'],
         },
+        'rxjs': {
+          singleton: true,
+          requiredVersion: 'auto'
+        }
       },
     })
   ],

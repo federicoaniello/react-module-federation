@@ -9,6 +9,8 @@ module.exports = merge(sharedWebpackConfig, {
     path: path.resolve(__dirname, '../dist/server'),
     filename: '[name].js',
     libraryTarget: 'commonjs-module',
+    globalObject: 'this'
+
   },
   target: false,
   name: 'server',

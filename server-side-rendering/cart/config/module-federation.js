@@ -11,7 +11,7 @@ module.exports = {
 
     },
     exposes: {
-       './Cart': './src/Cart',
+       './Cart': './src/CartListComponent',
     },
     shared: {
       ...deps,
@@ -37,7 +37,7 @@ module.exports = {
 
       },
       exposes: {
-        './Cart': './src/Cart',
+        './Cart': './src/CartListComponent',
       },
       shared: {
         ...deps,

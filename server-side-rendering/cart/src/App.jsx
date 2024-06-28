@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Cart from './Cart';
+import CartListComponent from './CartListComponent';
 
-const App = () => <Cart />;
+const App = () => <CartListComponent />;
 
 ReactDOM.render(<App />, document.getElementById('app'));

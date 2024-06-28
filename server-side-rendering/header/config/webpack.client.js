@@ -10,6 +10,8 @@ module.exports = merge(sharedWebpackConfig, {
   output: {
     path: path.resolve(__dirname, '../dist/client'),
     publicPath: 'http://localhost:3003/client/',
+    globalObject: 'this'
+
   },
   plugins: [
     moduleFederationPlugin.client,
