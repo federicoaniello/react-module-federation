@@ -11,6 +11,8 @@ module.exports = {
       header:'header@http://localhost:3003/client/remoteEntry.js',
       styleguide:'styleguide@http://localhost:3004/client/remoteEntry.js',
       contact:'contact@http://localhost:3005/client/remoteEntry.js',
+      landingpage:'landingpage@http://localhost:3006/client/remoteEntry.js',
+
     },
     shared: [{ react: deps.react, 'react-dom': deps['react-dom'], 'react-router-dom':deps['react-router-dom'] }],
   }),
@@ -25,6 +27,7 @@ module.exports = {
         header: 'header@http://localhost:3003/server/remoteEntry.js',
         styleguide:'styleguide@http://localhost:3004/server/remoteEntry.js',
         contact:'contact@http://localhost:3005/server/remoteEntry.js',
+        landingpage:'landingpage@http://localhost:3006/server/remoteEntry.js',
 
       },
       shared: [{ react: deps.react, 'react-dom': deps['react-dom'],'react-router-dom':deps['react-router-dom'] }],

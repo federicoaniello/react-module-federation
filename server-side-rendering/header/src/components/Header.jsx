@@ -20,6 +20,9 @@ export default function Header (){
                 <NavLink className="nav-link" to='/'> Home</NavLink>
               </li>
               <li className="nav-item">
+                <NavLink className="nav-link" to='/landingpage'>LandingPage</NavLink>
+              </li>
+              <li className="nav-item">
                 <NavLink className="nav-link" to='/about'>About</NavLink>
               </li>
               <li className="nav-item">

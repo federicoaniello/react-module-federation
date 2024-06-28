@@ -3,7 +3,7 @@ import Home from "../Views/Home";
 import React, { Suspense } from "react";
 import About from "../Views/About";
 import Contact from "contact/Contact";
-
+import LandingPage from "landingpage/Landingpage";
 const Header = React.lazy(() => import("header/Header"));
 export default function App () {
 
@@ -14,6 +14,7 @@ export default function App () {
        </Suspense>
         <Routes>
           <Route path="/" Component={Home} />
+          <Route path="/landingpage" Component={LandingPage}></Route>
           <Route path="/about" Component={About} />
           <Route path="/contact" Component={Contact}></Route>
         </Routes>
