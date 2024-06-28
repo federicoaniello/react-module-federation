@@ -2,6 +2,7 @@ import {Routes,Route} from "react-router-dom";
 import Home from "../Views/Home";
 import React, { Suspense } from "react";
 import About from "../Views/About";
+import Contact from "contact/Contact";
 
 const Header = React.lazy(() => import("header/Header"));
 export default function App () {
@@ -14,6 +15,7 @@ export default function App () {
         <Routes>
           <Route path="/" Component={Home} />
           <Route path="/about" Component={About} />
+          <Route path="/contact" Component={Contact}></Route>
         </Routes>
       </>
     )

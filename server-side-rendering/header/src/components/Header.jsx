@@ -22,6 +22,9 @@ export default function Header (){
               <li className="nav-item">
                 <NavLink className="nav-link" to='/about'>About</NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to='/contact'>Contact</NavLink>
+              </li>
             </ul>
             <form className="d-flex" onSubmit={handleSubmit}>
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
