@@ -1,5 +1,5 @@
 import React from "react";
-export default function ProfileDropdown(props) {
+const ProfileDropdown = (props) => {
     return (
       <div className="dropdown text-end">
         <a href="#" className="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -14,4 +14,6 @@ export default function ProfileDropdown(props) {
       </div>
     );
   }
+
+  export default ProfileDropdown;
   

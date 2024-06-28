@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import CartDropdown from "cart/Cart";
 import ProfileDropdown from "../components/profile.component";
-export default function Header (){
+const Header = () => {
 
 
     return (
@@ -16,19 +16,19 @@ export default function Header (){
             </svg>
           </a>
           <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li>
+            <li className="nav-link px-2">
               <NavLink to="/">Home</NavLink>
             </li>
-            <li>
+            <li className="nav-link px-2">
               <NavLink to="/landingpage">LandingPage</NavLink>
             </li>
-            <li>
+            <li className="nav-link px-2">
               <NavLink to="/contact">Contact</NavLink>
             </li>
-            <li>
+            <li className="nav-link px-2">
               <NavLink to="/catalog">Catalog</NavLink>
             </li>
-            <li>
+            <li className="nav-link px-2">
               <NavLink to="/about">About</NavLink>
             </li>
           </ul>
@@ -39,3 +39,5 @@ export default function Header (){
     </header>
     )
 }
+
+export default Header;

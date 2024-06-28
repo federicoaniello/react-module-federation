@@ -5,13 +5,13 @@ export const cart$ = new BehaviorSubject({products:[], total: 0});
 const cart = new Map();
 const products = new Map();
 
-export function loadCartData() {
+export const loadCartData = () => {
     const localCart = localStorage.getItem('cart');
     if(localCart)
         cart$.next(JSON.parse(localCart))
 }
 
-export function addToCart(addedProduct) {
+export const addToCart = (addedProduct) => {
     const product = products.get(addedProduct.id);
     if(!product) {
         products.set(addedProduct.id, addedProduct);
@@ -25,7 +25,7 @@ export function addToCart(addedProduct) {
     cart$.next(getCartData());
 }
 
-export function removeFromCart(removedProduct) {
+export const removeFromCart = (removedProduct) => {
     const cartProductQuantity = cart.get(removedProduct.id);
     if(!!cartProductQuantity) {
         if(cartProductQuantity > 1) {
@@ -35,10 +35,10 @@ export function removeFromCart(removedProduct) {
             products.delete(removedProduct.id);
         }
     }
-    this.cart$.next(getCartData());
+    cart$.next(getCartData());
 }
 
-function getCartData() {
+const getCartData = () => {
     let total = 0;
     const cartPrducts = Array.from(cart.entries()).map(([id, quantity]) => {
         const product = products.get(id);
